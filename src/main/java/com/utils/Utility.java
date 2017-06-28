@@ -1,6 +1,6 @@
 package com.utils;
 
-import com.erpam.mert.TWEC.model.Tweet;
+import com.erpam.mert.ST_TWEC.model.Tweet;
 
 import java.io.*;
 import java.util.*;

@@ -1,8 +1,8 @@
-package com.erpam.mert.TWEC;
+package com.erpam.mert.ST_TWEC;
 
-import com.erpam.mert.TWEC.model.Cluster;
-import com.erpam.mert.TWEC.model.ClusterElement;
-import com.erpam.mert.TWEC.model.Tweet;
+import com.erpam.mert.ST_TWEC.model.Cluster;
+import com.erpam.mert.ST_TWEC.model.ClusterElement;
+import com.erpam.mert.ST_TWEC.model.Tweet;
 import com.utils.Utility;
 import com.utils.io.Writer;
 

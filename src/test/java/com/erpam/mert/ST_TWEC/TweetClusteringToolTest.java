@@ -2,10 +2,10 @@
  * Created by mert on 25/06/2017.
  */
 
-package com.erpam.mert.TWEC;
+package com.erpam.mert.ST_TWEC;
 
 import com.abahgat.suffixtree.Node;
-import com.erpam.mert.TWEC.model.Tweet;
+import com.erpam.mert.ST_TWEC.model.Tweet;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;

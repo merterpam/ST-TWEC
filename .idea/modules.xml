@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TWEC.iml" filepath="$PROJECT_DIR$/TWEC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ST-TWEC.iml" filepath="$PROJECT_DIR$/ST-TWEC.iml" />
     </modules>
   </component>
 </project>

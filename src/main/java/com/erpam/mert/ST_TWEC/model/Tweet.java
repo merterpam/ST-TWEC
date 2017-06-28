@@ -1,4 +1,4 @@
-package com.erpam.mert.TWEC.model;
+package com.erpam.mert.ST_TWEC.model;
 
 import java.io.Serializable;
 

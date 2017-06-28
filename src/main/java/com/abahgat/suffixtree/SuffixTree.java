@@ -1,8 +1,8 @@
 package com.abahgat.suffixtree;
 
 
-import com.erpam.mert.TWEC.model.Cluster;
-import com.erpam.mert.TWEC.model.Tweet;
+import com.erpam.mert.ST_TWEC.model.Cluster;
+import com.erpam.mert.ST_TWEC.model.Tweet;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
