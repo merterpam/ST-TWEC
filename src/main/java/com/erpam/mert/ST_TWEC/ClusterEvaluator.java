@@ -182,10 +182,15 @@ public class ClusterEvaluator implements Serializable {
         int unclusteredTweetSize = 0;
         Writer writer = new Writer();
         writer.openWriter(directoryPath + "output_" + filename + "_" + clusterThreshold + ".txt");
+
+        writer.writeLine("Label:\tCluster_Name\tCluster_Size");
+        writer.writeLine("Tweet\tTweet_Size");
+        writer.writeLine("");
+
         int count = 0;
         for (Cluster cluster : clusters) {
             if (!cluster.isMerged()) {
-                writer.writeLine("Label: " + cluster.getLabel() + " " + cluster.getTweetSize());
+                writer.writeLine("Label:\t" + cluster.getLabel() + "\t" + cluster.getTweetSize());
 
                 for (ClusterElement element : cluster.getElements()) {
                     writer.writeLine(element.getTweet().getTweet() + "\t" + element.getTweetSize());
@@ -273,6 +278,10 @@ public class ClusterEvaluator implements Serializable {
     public File printEvaluationResults(String directoryPath) {
         Writer writer = new Writer();
         writer.openWriter(directoryPath + "evaluation_" + filename + "_" + clusterThreshold + ".txt");
+
+        writer.writeLine("Cluster_Label\tCluster_Size\tIntra-cluster_Evaluation_Score");
+        writer.writeLine("");
+
         for (Cluster cluster : clusters) {
             if (!cluster.isMerged()) {
                 writer.writeLine(cluster.getLabel() + "\t"

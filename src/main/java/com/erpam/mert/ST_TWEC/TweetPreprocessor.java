@@ -11,8 +11,13 @@ import java.util.*;
 public class TweetPreprocessor {
 
     private ArrayList<Tweet> noContentTweets;
-    private float preprocessThreshold;
+    private float preprocessThreshold = 0.6f;
     private List<Tweet> tweets;
+
+    public TweetPreprocessor(List<Tweet> tweets) {
+        this.noContentTweets = new ArrayList<>();
+        this.tweets = tweets;
+    }
 
     public TweetPreprocessor(float preprocessThreshold, List<Tweet> tweets) {
 

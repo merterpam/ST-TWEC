@@ -36,7 +36,7 @@ public class Cluster implements Comparable<Cluster>, Serializable {
 
         ClusterElement element = null;
         for (int i = 0; i < getElements().size(); i++) {
-            if (getElements().get(i).getTweet().equals(tweet)) {
+            if (getElements().get(i).getTweet().getTweet().equals(tweet.getTweet())) {
                 element = getElements().get(i);
             }
         }
