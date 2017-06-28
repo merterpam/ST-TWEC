@@ -41,7 +41,7 @@ public class SampleApplication {
         evaluator.printClusters(clusterDirectory);
 
         evaluator.evaluateClusters();
-        evaluator.printEvaluationResults("evaluations/");
+        evaluator.printEvaluationResults(evaluationDirectory);
         evaluator.printSummary(evaluationDirectory, clusterTime);
     }
 }
