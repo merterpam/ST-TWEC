@@ -7,6 +7,8 @@ ST-TWEC uses <a href="https://github.com/abahgat/suffixtree">abahgat's Suffix Tr
 
 ST-TWEC has three sub-modules: Tweet pre-processor, clustering tool and cluster evaluator. Each sub-module uses the output of the previous module: Clustering tool takes the pre-processed tweets from tweet pre-processor and clusters them. Cluster evaluator takes the clusters and responsible for evaluation and printing clusters and evaluation results.
 
+The explanation of the algorithm can be found on technical report [Tweets on a tree: Index-based clustering of tweets](http://research.sabanciuniv.edu/31274/1/Technical_Report.pdf).
+
 # Usage
 
 ST-TWEC requires a Tweet instance for a tweet. Tweet instances can be manually created, but it can also be automatically read from files. Utility class has a static function for this purpose. It can read tweets from a file with the following format: 
