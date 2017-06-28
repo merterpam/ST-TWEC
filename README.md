@@ -3,7 +3,7 @@ Suffix Tree based Tweet Clustering
 
 ST-TWEC is a suffix tree based clustering algorithm for Twitter. It uses a generalized suffix tree to cluster tweets based on substring similarity. For fixed-sized documents such has tweets, ST-TWEC has a linear space and time complexity. 
 
-ST-TWEC uses abahgat’s Suffix Tree implementation for the generalized suffix tree implementation.
+ST-TWEC uses <a href="https://github.com/abahgat/suffixtree">abahgat's Suffix Tree</a> implementation for the generalized suffix tree implementation.
 
 ST-TWEC has three sub-modules: Tweet pre-processor, clustering tool and cluster evaluator. Each sub-module uses the output of the previous module: Clustering tool takes the pre-processed tweets from tweet pre-processor and clusters them. Cluster evaluator takes the clusters and responsible for evaluation and printing clusters and evaluation results.
 
