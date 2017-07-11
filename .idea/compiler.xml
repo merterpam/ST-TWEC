@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="TWEC" />
+        <module name="ST-TWEC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TWEC" target="1.8" />
+      <module name="ST-TWEC" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
