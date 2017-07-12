@@ -28,9 +28,9 @@ In order to use the tool, you have 2 options:
 
 ```
 <dependency>
-	    <groupId>com.github.merterpam</groupId>
-	    <artifactId>ST-TWEC</artifactId>
-	    <version>v1.0.0</version>
+	<groupId>com.github.merterpam</groupId>
+	<artifactId>ST-TWEC</artifactId>
+	<version>v1.0.0</version>
 </dependency>
 ```
 
