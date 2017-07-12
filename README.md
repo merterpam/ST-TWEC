@@ -9,7 +9,7 @@ ST-TWEC has three sub-modules: Tweet pre-processor, clustering tool and cluster 
 
 The explanation of the algorithm can be found on technical report [Tweets on a tree: Index-based clustering of tweets](http://research.sabanciuniv.edu/31274/1/Technical_Report.pdf).
 
-# Installation
+# Usage
 
 In order to use the tool, you have 2 options:
 
