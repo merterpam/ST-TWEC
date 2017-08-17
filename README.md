@@ -11,6 +11,36 @@ The explanation of the algorithm can be found on technical report [Tweets on a t
 
 # Usage
 
+In order to use the tool, you have 2 options:
+
+### 1. Maven
+
+  * Add the following to the <repositories> section of your pom.xml:
+
+```
+<repository>
+       <id>jitpack.io</id>
+       <url>https://jitpack.io</url>
+</repository>
+```
+
+  * Add the following to the <dependencies> section of your pom.xml:
+
+```
+<dependency>
+	<groupId>com.github.merterpam</groupId>
+	<artifactId>ST-TWEC</artifactId>
+	<version>v1.0.0</version>
+</dependency>
+```
+
+### 2. Jar file only
+
+  * Download the [latest .jar file](https://github.com/merterpam/ST-TWEC/releases) from the releases section.
+  * Add it to as your library and you can use ST-TWEC. 
+
+# Documentation
+
 ST-TWEC requires a Tweet instance for a tweet. Tweet instances can be manually created, but it can also be automatically read from files. Utility class has a static function for this purpose. It can read tweets from a file with the following format: 
 
 ```
