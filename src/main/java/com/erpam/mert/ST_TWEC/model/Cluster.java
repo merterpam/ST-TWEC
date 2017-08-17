@@ -11,6 +11,7 @@ public class Cluster implements Comparable<Cluster>, Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private String mostSeenLabel;
     private boolean displayedForMerge;
     private ArrayList<ClusterElement> elements;
     private transient double evaluationScore;
@@ -156,5 +157,13 @@ public class Cluster implements Comparable<Cluster>, Serializable {
 
     public void setMergedClusterIndexes(HashSet<Integer> mergedClusterIndexes) {
         this.mergedClusterIndexes = mergedClusterIndexes;
+    }
+
+    public String getMostSeenLabel() {
+        return mostSeenLabel;
+    }
+
+    public void setMostSeenLabel(String mostSeenLabel) {
+        this.mostSeenLabel = mostSeenLabel;
     }
 }

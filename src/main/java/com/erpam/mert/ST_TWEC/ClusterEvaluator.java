@@ -103,14 +103,17 @@ public class ClusterEvaluator implements Serializable {
                     }
                 }
 
+                String label = "";
                 int maxLabelC = 0;
                 for (String key : labelMap.keySet()) {
                     if (labelMap.get(key) > maxLabelC) {
                         maxLabelC = labelMap.get(key);
+                        label = key;
                     }
                 }
 
                 cluster.setPurity(((double) maxLabelC));
+                cluster.setMostSeenLabel(label);
 
                 double evaluationScore = clusterScore / clusterComparison;
                 cluster.setEvaluationScore(evaluationScore);
@@ -183,17 +186,17 @@ public class ClusterEvaluator implements Serializable {
         Writer writer = new Writer();
         writer.openWriter(directoryPath + "output_" + filename + "_" + clusterThreshold + ".txt");
 
-        writer.writeLine("Label:\tCluster_Name\tCluster_Size");
-        writer.writeLine("Tweet\tTweet_Size");
+        writer.writeLine("Label:\tCluster Name\tCluster Size\tMost Seen Label");
+        writer.writeLine("Tweet\tTweet Size\tTweet Label");
         writer.writeLine("");
 
         int count = 0;
         for (Cluster cluster : clusters) {
             if (!cluster.isMerged()) {
-                writer.writeLine("Label:\t" + cluster.getLabel() + "\t" + cluster.getTweetSize());
+                writer.writeLine("Label:\t" + cluster.getLabel() + "\t" + cluster.getTweetSize() + "\t" + cluster.getMostSeenLabel());
 
                 for (ClusterElement element : cluster.getElements()) {
-                    writer.writeLine(element.getTweet().getTweet() + "\t" + element.getTweetSize());
+                    writer.writeLine(element.getTweet().getTweet() + "\t" + element.getTweetSize() + "\t" + element.getTweet().getTweetLabel());
                 }
                 count += cluster.getTweetSize();
 
@@ -203,7 +206,7 @@ public class ClusterEvaluator implements Serializable {
                 for (int j : mergedIndexes) {
                     Cluster mC = clusters.get(j);
                     for (ClusterElement element : mC.getElements()) {
-                        writer.writeLine(element.getTweet().getTweet() + "\t" + element.getTweetSize());
+                        writer.writeLine(element.getTweet().getTweet() + "\t" + element.getTweetSize() + "\t" + element.getTweet().getTweetLabel());
                     }
                     count += mC.getTweetSize();
                 }

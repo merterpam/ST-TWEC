@@ -29,7 +29,8 @@ public class Utility {
 
     public static ArrayList<Tweet> readStream(BufferedReader reader) {
         ArrayList<Tweet> tweets = new ArrayList<>();
-        String line = null;
+        String line;
+        int tabNumber = 0;
         try {
             while ((line = reader.readLine()) != null) {
                 String splitLine[] = line.split("\t");
@@ -37,9 +38,17 @@ public class Utility {
                     Tweet tweet = new Tweet(splitLine[0], "");
                     tweets.add(tweet);
 
-                } else {
+                } else if (splitLine.length == 2) {
                     Tweet tweet = new Tweet(splitLine[0], splitLine[1]);
                     tweets.add(tweet);
+                } else {
+                    return null;
+                }
+
+                if (tabNumber == 0) {
+                    tabNumber = splitLine.length;
+                } else if (tabNumber != splitLine.length) {
+                    return null;
                 }
             }
         } catch (IOException e) {
